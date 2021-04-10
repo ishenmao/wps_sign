@@ -3,10 +3,19 @@ import requests
 from datetime import datetime
 import time
 import json
+import sys
 # wps ID列表，需要做任务的账号ID，可以添加多个
+id_list = []
 
 # 企业微信信息，用于推送消息通知，以查看执行情况
-
+qywx_info = {
+    # 企业 ID
+    'corid' : '企业 ID',
+    # 应用密钥
+    'secret' : '应用密钥',
+    # 应用 ID
+    'agentid' : 123456,
+}
 # 微信推送
 def push_wechat(txt):
     # get access_token
@@ -77,6 +86,14 @@ def main():
         
 def main_handler(event, context):
     return main()
-
+def get_args():
+    assert len(sys.argv) == 5, '参数个数不对'
+    for item_id in sys.argv[1].split(','):
+        id_list.append(int(item_id))
+    qywx_info['corid'] = sys.argv[2]
+    qywx_info['secret'] = sys.argv[3]
+    qywx_info['agentid'] = int(sys.argv[4])
+    
 if __name__ == '__main__':
+    get_args()
     main()
