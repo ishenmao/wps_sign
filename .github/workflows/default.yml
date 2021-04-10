@@ -42,5 +42,5 @@ jobs:
           echo test, and deploy your project.
           pip install requests
           
-          python sign_invite.py ${ID_LIST} ${CORID} ${SECRET} ${AGENTID}
+          python sign_invite.py ${{secrets.ID_LIST}} ${{secrets.CORID}} ${{secrets.SECRET}} ${{secrets.AGENTID}}
           
