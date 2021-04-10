@@ -95,5 +95,8 @@ def get_args():
     qywx_info['agentid'] = int(sys.argv[4])
     
 if __name__ == '__main__':
-    get_args()
-    main()
+    
+    for a in sys.argv:
+        print("fuck:   ", a)
+    #get_args()
+    #main()
