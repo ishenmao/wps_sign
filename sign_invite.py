@@ -75,7 +75,7 @@ def main():
                 break
             time.sleep(2.5) # 间隔2.5秒再邀请
             
-        push_txt = datetime.today().isoformat(sep=' ', timespec='seconds')
+        push_txt = (datetime.utcnow() + datetime.timedelta(hours=8)).isoformat(sep=' ', timespec='seconds')
         push_txt += "\nWPS签到的邀请推送"
         push_txt += "\n尝试为【ID：%d】邀请 %d 位用户，其中：" % (user_id, count['total'])
         push_txt += "\n邀请成功 %d 人，失败 %d 人。" % (count['succ'], len(count['fail']))
