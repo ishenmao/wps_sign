@@ -50,7 +50,8 @@ def main():
         "V02SPoOluAnWda0dTBYTXpdetS97tyI00a16135e002684bb5c",
         "V02Sb8gxW2inr6IDYrdHK_ywJnayd6s00ab7472b0026849b17",
         "V02SwV15KQ_8n6brU98_2kLnnFUDUOw00adf3fda0026934a7f",
-        "V02SC1mOHS0RiUBxeoA8NTliH2h2NGc00a803c35002693584d"
+        "V02SC1mOHS0RiUBxeoA8NTliH2h2NGc00a803c35002693584d",
+        "V02S8fWiw86zsFg1oE5p4hCHAR6GPE000a4e69e2002508b828"
 
     ]
     s = requests.session()
