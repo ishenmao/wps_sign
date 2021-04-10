@@ -41,7 +41,6 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           pip install requests
-          python sign_invite.py <<EOF
           
-          EOF
+          python sign_invite.py ${ID_LIST} ${CORID} ${SECRET} ${AGENTID}
           
