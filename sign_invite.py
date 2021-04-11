@@ -82,7 +82,9 @@ def main():
         push_txt += "\n邀请成功 %d 人，失败 %d 人。" % (count['succ'], len(count['fail']))
         for errItem in count['fail']:
             push_txt += '\n%s, %s' % (errItem['sid'], errItem['msg'])
-        push_txt += '\n<a href="mp://F49Xy9rxwhOWm8o">点我去打卡</a>'
+        push_txt += '\n<a href="mp://F49Xy9rxwhOWm8o">会员打卡</a>'
+        push_txt += '   <a href="mp://P2tulcSBYclooSc">稻壳签到</a>'
+        push_txt += '   <a href="https://zt.wps.cn/spa/2019/vip_mobile_sign_v2/?from=wx_info_page&_wxv=20210302">积分签到</a>'
         push_wechat(push_txt)
         
 def main_handler(event, context):
