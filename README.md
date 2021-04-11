@@ -16,6 +16,7 @@
 - CORID：企业微信的 企业ID
 - SECRET：应用密钥
 - AGENTID：应用ID
+![创建仓库秘密变量](create_secrets.png)
 
 ## 执行 Action
 action设定为手动执行和定时执行，在 `Actions` -> `All Workflows` -> `wps_sign` 页面，有一个手动触发按钮 `Run workflow`, 点击可手动执行一次，除此之外，每天 6:06 会自动执行一次。
