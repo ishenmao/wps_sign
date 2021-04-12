@@ -14,7 +14,7 @@ qywx_info = {
     # 应用密钥
     'secret' : '应用密钥',
     # 应用 ID
-    'agentid' : 123456,
+    'agentid' : 123456
 }
 # 微信推送
 def push_wechat(txt):
