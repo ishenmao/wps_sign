@@ -57,7 +57,7 @@ def main():
     s = requests.session()
     invite_url = 'http://zt.wps.cn/2018/clock_in/api/invite'
     for user_id in id_list:
-        post_data = {'invite_userid': user_id}
+        post_data = {'invite_userid': user_id,"client_code": "040ce6c23213494c8de9653e0074YX30", "client": "alipay"}
         count = {'total':0, 'succ':0, 'fail':[]}
         for wps_sid in sid_list:
             r = s.post(invite_url, headers = {'sid': wps_sid}, data = post_data)
