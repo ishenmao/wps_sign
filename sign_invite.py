@@ -5,7 +5,7 @@ import time
 import json
 import sys
 # wps ID列表，需要做任务的账号ID，可以添加多个
-id_list = []
+id_list = [1004295040]
 
 # 企业微信信息，用于推送消息通知，以查看执行情况
 qywx_info = {
