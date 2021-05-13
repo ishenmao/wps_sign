@@ -59,7 +59,7 @@ def main():
         post_data = {'invite_userid': user_id,"client_code": "040ce6c23213494c8de9653e0074YX30", "client": "alipay"}
         count = {'total':0, 'succ':0, 'fail':[]}
         for wps_sid in sid_list:
-            r = s.post(invite_url, headers = {'sid': wps_sid}, data = post_data)
+            r = s.post(invite_url, headers = {'sid': wps_sid}, json = post_data)
             # debug
             print(r.text)
             count['total'] += 1
