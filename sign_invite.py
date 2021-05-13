@@ -7,6 +7,7 @@ import sys
 
 dlabel = 1
 def debugme(other = None):
+    global dlabel
     print('【%s】' % str(dlabel), other)
     dlabel += 1
 
