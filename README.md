@@ -1,4 +1,6 @@
-# 2021.4.~~23~~26 WPS更新了，邀请代码~~失效~~ ~~又能用了~~彻底废了！！！
+# 2021.4.26 WPS更新，邀请代码失效！
+# 2021.5.14 修改代码，需要自行提供sid和cilent_code
+
 
 ## WPS 签到邀请
 完成打卡得会员活动中的邀请任务，需要次日 6:00-13:00 手动打卡。推送消息中，添加了几个链接，方便手动打卡签到。无其他功能。
@@ -14,11 +16,13 @@
 ## 创建仓库 secret 变量
 1. fork 本仓库
 2. 进入此仓库，`Settings` -> `Secrets` -> `New repository secret`，创建如下四个变量。
-- ID_LIST: 需要做任务的 id，可以是多个，多个id需要用英文逗号隔开。（可在WPS个人中心看到）
+- ID: 需要做任务的 id。（可在WPS个人中心看到）
+- SID_LIST：被邀请者的sid，逗号分开（小心失效）
+- CODE_SCRIPT：获取client_code的代码
 - CORID：企业微信的 企业ID
 - SECRET：应用密钥
 - AGENTID：应用ID
-![创建仓库秘密变量](create_secrets.png)
+- 
 
 ## 执行 Action
 action设定为手动执行和定时执行，在 `Actions` -> `All Workflows` -> `wps_sign` 页面，有一个手动触发按钮 `Run workflow`, 点击可手动执行一次，除此之外，每天 6:06 会自动执行一次。
