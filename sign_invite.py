@@ -4,6 +4,14 @@ import datetime
 import time
 import json
 import sys
+
+dlabel = 1
+def debugme(other = None):
+    print('【%s】' % str(dlabel), other)
+    dlabel += 1
+
+
+
 # wps ID
 user_id = ''
 sid_list = []
@@ -12,6 +20,8 @@ qywx_info = {}
 user_sid = ''
 qlist = []
 # 微信推送
+
+
 def push_wechat(txt):
     def current_time():
         return (datetime.datetime.utcnow() + datetime.timedelta(hours=8)).isoformat(sep=' ', timespec='seconds')
@@ -157,7 +167,7 @@ def main():
         do_clock(user_sid)
     
     s = requests.session()
-    
+    debugme('main 里面')
     err_txt = ''
     ok_count = 0
     fail_count = 0
@@ -221,13 +231,19 @@ def get_args():
     for item_sid in sys.argv[2].split(','):
         sid_list.append(item_sid)
     code_script = sys.argv[3]
+    
+    debugme()
     qywx_info.update(eval(sys.argv[4]))
+    debugme()
     user_sid = sys.argv[5]
+    debugme()
     qlist = eval(sys.argv[6])
+    debugme()
     
     
     
     client = eval(code_script)
+    debugme('code测试后面')
     assert type(client['code']) == str and len(client['code']) == 32, 'The code script you provided is wrong!'
 
 def local_test():
@@ -239,5 +255,7 @@ if __name__ == '__main__':
         print("fuck:   ", a)
     """
     get_args()
+    
+    debugme()
     #local_test()
     main()
