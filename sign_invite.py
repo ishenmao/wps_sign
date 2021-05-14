@@ -226,7 +226,8 @@ def main_handler(event, context):
 def get_args():
     global user_id, client, user_sid, qlist
     
-    assert len(sys.argv) == 7, 'The amount of args is wrong!'
+    for i in range(1,7):
+        assert sys.argv[i] != "", "Lack of essential parameters!"
     user_id = sys.argv[1].strip()
     for item_sid in sys.argv[2].split(','):
         sid_list.append(item_sid)
