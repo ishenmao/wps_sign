@@ -1,3 +1,1 @@
-# 2021.4.26 WPS更新，邀请代码失效！
-# 2021.5.14 修改代码，需要自行提供sid和cilent_code
-
+Please read code by yourself.
