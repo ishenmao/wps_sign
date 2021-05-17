@@ -41,5 +41,5 @@ jobs:
           echo test, and deploy your project.
           pip install requests
           
-          # python sign_invite.py "${{secrets.USER_ID}}" "${{secrets.SID_LIST}}" "${{secrets.CODE_SCRIPT}}" "${{secrets.QYWX_INFO}}" "${{secrets.USER_SID}}" "${{secrets.QLIST}}"
+        # python sign_invite.py "${{secrets.USER_ID}}" "${{secrets.SID_LIST}}" "${{secrets.CODE_SCRIPT}}" "${{secrets.QYWX_INFO}}" "${{secrets.USER_SID}}" "${{secrets.QLIST}}"
           
